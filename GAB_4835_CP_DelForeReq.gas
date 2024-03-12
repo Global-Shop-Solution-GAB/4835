@@ -1,0 +1,21 @@
+Program.Sub.ScreenSU.Start
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+
+F.ODBC.Connection!Conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,120)
+
+F.ODBC.Connection!Conx.Execute("DELETE FROM FORECAST_REQ WHERE FO_SEQ='000000' AND FO_SUFFIX='000' ")
+
+F.ODBC.Connection!Conx.Close
+
+Program.Sub.Main.End
+
+Program.Sub.Comments.Start
+${$0$}$GAB_CP_DelForeTbl$}$RR$}$3/18/2014$}$False
+Program.Sub.Comments.End
+
